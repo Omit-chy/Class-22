@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallary{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallary .image-grp{
+    width: calc(25% - 10px);
+    margin: 0 5px ;
+    cursor: pointer;
+}
+.gallary .image{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(119, 112, 112, 0.31);
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+.gallary .image.active{
+    visibility: visible;
+    opacity: 1;
+}
+.gallary .image img{
+    height: 550px;
+}
+.gallary .image .cross{
+    background-color: black;
+    color: #fff;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.8s;
+}
+.gallary .image .cross:hover{
+    background-color: #fff;
+    color: #000;
+    transform: rotate(180deg);
+}
+.gallary .image .arrow{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+}
+.gallary .image .arrow.left{
+    left: 10%
+}
+.gallary .image .arrow.right{
+    right: 10%
+}
